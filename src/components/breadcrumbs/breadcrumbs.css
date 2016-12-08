@@ -1,4 +1,13 @@
 .breadcrumbs {
     padding: 1rem;
-    color: white;
+    color: #444;
+    padding-left: 4rem;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    padding: .25rem;
+    text-align: left;
+    font-size: 1.25rem;
 }

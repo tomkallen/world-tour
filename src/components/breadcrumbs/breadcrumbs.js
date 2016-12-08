@@ -3,9 +3,12 @@ import './breadcrumbs.css';
 
 export const Breadcrumbs = props => (
     <div className="breadcrumbs">
-        <li>{props.country}</li>
-        <li>{props.state}</li>
-        <li>{props.city ? props.city : ''}</li>
-        <li></li>
+        { props.nav.country && <li> { props.nav.country }</li>}
+        { props.nav.state && <li>> { props.nav.state }</li>}
+        { props.nav.city && <li>> { props.nav.city }</li>}        
     </div>
 );
+
+Breadcrumbs.propTypes = {
+    nav: PropTypes.object.isRequired
+}

@@ -1,10 +1,9 @@
-.App {
-    text-align: center;
-}
-
 .App-header {
-    background-color: #333;
     padding: 15px;
-    color: #FF7E00;
-    border-bottom: 2px solid #777;
+    text-align: center;
+    color: #444;
+    border-bottom: 2px solid #111;
+    letter-spacing: .15rem;
+    line-height: .1rem;
+    font-size: 1.75rem;
 }
