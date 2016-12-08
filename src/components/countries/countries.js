@@ -1,9 +1,13 @@
 import React, { PropTypes } from 'react';
+import './countries.css';
 
 export const Countries = props => (
-        <h3>{props.heading}</h3>
+    <div className="countries">
+        {props.data && props.data
+            .map(v=> (<div className="country" key={v.countryName}>{v.countryName}</div>))}
+    </div>
     );
 
 Countries.propTypes = {
-    heading: PropTypes.string.isRequired
+    data: PropTypes.array
 }
