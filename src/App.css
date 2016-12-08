@@ -1,9 +1,8 @@
 .App-header {
-    padding: 15px;
-    text-align: center;
-    color: #444;
-    border-bottom: 2px solid #111;
-    letter-spacing: .15rem;
-    line-height: .1rem;
-    font-size: 1.75rem;
+    padding: .5rem 1rem .5rem 4rem;
+    color: #00416A;
+    line-height: 0;
+    font-size: 1.25rem;
+    letter-spacing: .25rem;
+    text-transform: uppercase;
 }
