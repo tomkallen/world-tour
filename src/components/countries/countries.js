@@ -1,13 +1,55 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import './countries.css';
 
-export const Countries = props => (
-    <div className="countries">
-        {props.data && props.data
-            .map(v=> (<div className="country" key={v.countryName}>{v.countryName}</div>))}
-    </div>
-    );
+class Countries extends Component {
+    constructor(){
+        super();
+        this.state = {
+            container: null
+        }
+    }
+    render() {
+        let countriesList;
+        if (this.props.data) {
+            countriesList = this.props.data.geonames
+                .map(v => (
+                    <div key={ v.countryName }>
+                        <Country data={ v }/>
+                    </div>
+                ))
+        }
+        return (
+            <div className="countries">
+                { countriesList }
+            </div>
+        );
+    }
+}
+
+class Country extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            data:this.props.data
+        }
+    }
+
+    render(){
+        let code = this.state.data.countryCode;
+        return(
+            <div className="country">
+                <img className="flag"
+                src={'http://www.geonames.org/flags/x/'+code.toLowerCase()+'.gif'}
+                alt="Country Flag"/>
+                {this.state.data.countryName}
+            </div>
+        )
+    }
+}
+
 
 Countries.propTypes = {
-    data: PropTypes.array
-}
+    data: PropTypes.object
+};
+
+export { Countries, Country }
