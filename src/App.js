@@ -2,37 +2,43 @@ import React, { Component } from 'react';
 import './App.css';
 import { Countries } from './components/countries';
 import { Breadcrumbs } from './components/breadcrumbs';
+import { Info } from './components/info';
 
 class App extends Component {
     componentDidMount() {
         fetch("http://api.geonames.org/countryInfoJSON?formatted=true&lang=en&country=&username=tomkallen&style=full")
             .then(r => r.json())
-            .then(data => { this.setState({ geo: data }) })
-
-
+            .then(data => { this.setState({ geo: data }) });
     }
+
     constructor() {
         super();
+        this.onUpdate = this.onUpdate.bind(this);
         this.state = {
-            nav: {
-                country: "Russia",
-                state: "North-West",
-                city: "Saint-Petersburg"
-            },
-            geo: null
+            geo: null,
+            container: {}
         }
 
+    }
+    onUpdate(data){
+        // receives selected country from the child component to work with
+        this.setState({ container:data });
     }
 
     render() {
         return (
             <div className="App">
-                <div className="App-header">
-                    <h1> The World Tour </h1>
+                <div className="App__header">
+                    <div className="App__logo">The World Tour</div>
+                    <Breadcrumbs nav={ this.state.container }/>
                 </div>
-                < Breadcrumbs nav={ this.state.nav }/>
-                < Countries data={ this.state.geo }/>
+
+                    <Countries
+                        onUpdate={ this.onUpdate }
+                        data={ this.state.geo }/>
+                    <Info />
             </div>
+
         );
     }
 }

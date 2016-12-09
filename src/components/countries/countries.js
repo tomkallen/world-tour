@@ -2,19 +2,29 @@ import React, { Component, PropTypes } from 'react';
 import './countries.css';
 
 class Countries extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
-            container: null
-        }
+            container: {} // stores the state of selected country
+        };
+
+        this.onUpdate = this.onUpdate.bind(this);
     }
+
+    onUpdate(data){
+        // receives selected country from the child component to work with
+        this.setState({container:data}, ()=> this.props.onUpdate(this.state.container));
+    }
+
     render() {
         let countriesList;
         if (this.props.data) {
             countriesList = this.props.data.geonames
                 .map(v => (
                     <div key={ v.countryName }>
-                        <Country data={ v }/>
+                        <Country
+                            onUpdate={this.onUpdate}
+                            data={ v }/>
                     </div>
                 ))
         }
@@ -29,18 +39,20 @@ class Countries extends Component {
 class Country extends Component{
     constructor(props){
         super(props);
+        this.transfer = this.transfer.bind(this);
         this.state = {
             data:this.props.data
         }
     }
+    transfer(){
+        // pulling current country object up to the parent node
+        this.props.onUpdate(this.props.data);
+    }
 
     render(){
-        let code = this.state.data.countryCode;
+
         return(
-            <div className="country">
-                <img className="flag"
-                src={'http://www.geonames.org/flags/x/'+code.toLowerCase()+'.gif'}
-                alt="Country Flag"/>
+            <div onClick={this.transfer} className="country">
                 {this.state.data.countryName}
             </div>
         )

@@ -1,8 +1,19 @@
-.App-header {
-    padding: .5rem 1rem .5rem 4rem;
+.App__header .App__logo {
+    padding: 1rem 1rem 1rem 4rem;
     color: #00416A;
-    line-height: 0;
-    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
     letter-spacing: .25rem;
     text-transform: uppercase;
+
+}
+
+.countries {
+    width: 15%;
+    float: left;
+}
+
+.info {
+    /*width:75%;*/
+    float: left;
 }
