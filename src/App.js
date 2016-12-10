@@ -13,17 +13,14 @@ class App extends Component {
 
     constructor() {
         super();
-        this.onUpdate = this.onUpdate.bind(this);
         this.state = {
             geo: null,
             container: {}
         }
 
     }
-    onUpdate(data){
-        // receives selected country from the child component to work with
-        this.setState({ container:data });
-    }
+    onUpdate = data => this.setState({ container:data });
+    // receives selected country from the child component to work with
 
     render() {
         return (
