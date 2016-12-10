@@ -9,14 +9,14 @@ class Countries extends Component {
 
     onUpdate = data =>{
         // receives selected country from the child component to work with
-        this.setState({ container:data },
+        this.setState({ container: data },
             () => this.props.onUpdate(this.state.container));
     };
 
     render() {
         let countriesList;
         if (this.props.data) {
-            countriesList = this.props.data.geonames.map(v => (
+            countriesList = this.props.data.map(v => (
                 <div key={ v.countryName }>
                     <Country
                         onUpdate={ this.onUpdate }
@@ -24,18 +24,13 @@ class Countries extends Component {
                 </div>
             ))
         }
-        return (
-            <div className="countries">
-                { countriesList }
-            </div>
-        );
+        return (<div className="countries">{ countriesList }</div>);
     }
 }
 
 class Country extends Component{
     constructor(props){
         super(props);
-        this.transfer = this.transfer.bind(this);
         this.state = { data: this.props.data }
     }
 
@@ -51,6 +46,7 @@ class Country extends Component{
     }
 }
 
-Countries.propTypes = { data: PropTypes.object };
+Countries.propTypes = { data: PropTypes.array.isRequired };
+Country.propTypes = { data: PropTypes.object.isRequired };
 
 export { Countries, Country }
