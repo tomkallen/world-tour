@@ -8,8 +8,9 @@ import './App.css';
 class App extends Component {
     componentDidMount() {
         fetch("http://api.geonames.org/countryInfoJSON?formatted=true&lang=en&country=&username=tomkallen&style=full")
-            .then(r => r.json())
-            .then(data => this.setState({ geo: data.geonames }));
+            .then(response => response.json())
+            .then(data => this.setState({ geo: data.geonames }))
+            .catch(error => console.log('Error receiving data', error));
     }
 
     constructor() {
