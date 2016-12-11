@@ -1,0 +1,17 @@
+.info {
+    padding: 2rem;
+    width: 80%;
+}
+
+.info h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+
+}
+
+.info p {
+    font-size:1.25rem;
+    line-height:1rem;
+}

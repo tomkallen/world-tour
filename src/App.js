@@ -34,7 +34,7 @@ class App extends Component {
                     <Countries
                         onUpdate={ this.onUpdate }
                         data={ this.state.geo }/>
-                    <Info />
+                    <Info data={ this.state.geo }/>
             </div>
 
         );
