@@ -15,9 +15,6 @@ export const Breadcrumbs = props => {
     return(<div className="breadcrumbs"><li>Please select country</li></div>);
 
 };
-//<img className="flag"
-//      src={'http://www.geonames.org/flags/x/'+code.toLowerCase()+'.gif'}
-//     alt="Country Flag"/>
 
 Breadcrumbs.propTypes = {
     nav: PropTypes.object.isRequired

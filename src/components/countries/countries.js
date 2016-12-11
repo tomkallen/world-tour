@@ -38,8 +38,13 @@ class Country extends Component{
     // pulling current country object up to the parent node
 
     render(){
+        let code = this.props.data.countryCode;
         return(
             <div onClick={ this.transfer } className="country">
+                <img className="flag"
+                     src={'http://www.geonames.org/flags/x/'+code.toLowerCase()+'.gif'}
+                     alt="Country Flag"/>
+
                 { this.state.data.countryName }
             </div>
         )

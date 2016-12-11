@@ -18,3 +18,9 @@
     color:#fff;
 }
 
+img {
+    display: inline-block;
+    width: 24px;
+    height:auto;
+    padding-right:.25rem;
+}

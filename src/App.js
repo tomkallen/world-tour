@@ -17,7 +17,8 @@ class App extends Component {
         super();
         this.state = {
             geo: [],
-            container: {}
+            container: {},
+            selected: false
         }
     }
 
@@ -34,7 +35,8 @@ class App extends Component {
                     <Countries
                         onUpdate={ this.onUpdate }
                         data={ this.state.geo }/>
-                    <Info data={ this.state.geo }/>
+                {!this.state.selected &&<Info data={ this.state.geo }/>}
+                {/* Show this dandy Info ^^^^ component when nothing is selected*/}
             </div>
 
         );
