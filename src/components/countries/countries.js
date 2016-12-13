@@ -1,33 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import './countries.css';
 
-class Countries extends Component {
-    constructor(props){
-        super(props);
-        this.state = { container: {} }; // stores the state of selected country
-    }
-
-    onUpdate = data =>{
-        // receives selected country from the child component to work with
-        this.setState({ container: data },
-            () => this.props.onUpdate(this.state.container));
-    };
-
-    render() {
-        let countriesList;
-        if (this.props.data) {
-            countriesList = this.props.data.map(v => (
-                <div key={ v.countryName }>
-                    <Country
-                        onUpdate={ this.onUpdate }
-                        data={ v }/>
-                </div>
-            ))
-        }
-        return (<div className="countries">{ countriesList }</div>);
-    }
-}
-
 class Country extends Component{
     constructor(props){
         super(props);
@@ -40,18 +13,18 @@ class Country extends Component{
     render(){
         let code = this.props.data.countryCode;
         return(
-            <div onClick={ this.transfer } className="country">
+            <li onClick={ this.transfer } className="country">
                 <img className="flag"
                      src={'http://www.geonames.org/flags/x/'+code.toLowerCase()+'.gif'}
                      alt="Country Flag"/>
 
-                { this.state.data.countryName }
-            </div>
+                { this.props.name }
+            </li>
         )
     }
 }
 
-Countries.propTypes = { data: PropTypes.array.isRequired };
-Country.propTypes = { data: PropTypes.object.isRequired };
 
-export { Countries, Country }
+
+
+export { Country }

@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import { Countries } from './components/countries';
+import { Continents } from './components/countries';
 import { Breadcrumbs } from './components/breadcrumbs';
 import { Info } from './components/info';
-
 import './App.css';
 
 class App extends Component {
     componentDidMount() {
         fetch("http://api.geonames.org/countryInfoJSON?formatted=true&lang=en&country=&username=tomkallen&style=full")
             .then(response => response.json())
-            .then(data => this.setState({ geo: data.geonames }))
+            .then(data => this.parseDB(data))
             .catch(error => console.log('Error receiving data', error));
     }
 
@@ -18,12 +17,36 @@ class App extends Component {
         this.state = {
             geo: [],
             container: {},
-            selected: false
+            selected: false,
+            db: {},
+            continents: []
         }
     }
 
     onUpdate = data => this.setState({ container:data });
     // receives selected country from the child component to work with
+
+    parseDB = data => {
+        let formattedDB = {};
+        let continents;
+        data.geonames.forEach(v =>
+            formattedDB.hasOwnProperty(v.continentName) ?
+                formattedDB[v.continentName].push(v.countryName):
+                formattedDB[v.continentName] = []
+        );
+
+        continents = Object.keys(formattedDB).map( key => { return(
+            <div key={ key }>
+                <Continents countryList={ formattedDB[key] } continent={ key }/>
+            </div>)});
+        console.log(continents);
+
+        this.setState({
+            geo: data.geonames,
+            db: formattedDB,
+            continents: continents
+        });
+    };
 
     render() {
         return (
@@ -32,13 +55,10 @@ class App extends Component {
                     <div className="App__logo">The World Tour</div>
                     <Breadcrumbs nav={ this.state.container }/>
                 </div>
-                    <Countries
-                        onUpdate={ this.onUpdate }
-                        data={ this.state.geo }/>
+                <div className="continent__list">{ this.state.continents }</div>
                 {!this.state.selected &&<Info data={ this.state.geo }/>}
                 {/* Show this dandy Info ^^^^ component when nothing is selected*/}
             </div>
-
         );
     }
 }

@@ -1,6 +1,8 @@
 .info {
     padding: 2rem;
-    width: 80%;
+    width: 70%;
+    float: right;
+    display: inline-block;
 }
 
 .info h2 {

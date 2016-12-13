@@ -1,11 +1,4 @@
-.countries {
-    /*width: 18rem;*/
-    border-right: 1px solid black;
-    padding-top: 1rem;
-    height:75vh;
-    overflow-y: scroll;
 
-}
 
 .country {
     padding: .5rem 1rem;

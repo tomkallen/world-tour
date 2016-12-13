@@ -8,12 +8,11 @@
 
 }
 
-.countries {
-    width: 15%;
-    float: left;
-}
-
-.info {
-    /*width:75%;*/
+.continent__list {
+    width: 20%;
+    border-right: 1px solid black;
+    padding-top: 1rem;
+    height:75vh;
+    overflow-y: scroll;
     float: left;
 }
