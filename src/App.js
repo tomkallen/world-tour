@@ -5,12 +5,6 @@ import { Info } from './components/info';
 import './App.css';
 
 class App extends Component {
-    componentDidMount() {
-        fetch("http://api.geonames.org/countryInfoJSON?formatted=true&lang=en&country=&username=tomkallen&style=full")
-            .then(response => response.json())
-            .then(data => this.parseDB(data))
-            .catch(error => console.log('Error receiving data', error));
-    }
 
     constructor() {
         super();
@@ -19,8 +13,15 @@ class App extends Component {
             container: {},
             selected: false,
             db: {},
-            continents: []
+            continentList: []
         }
+    }
+
+    componentDidMount() {
+        fetch("http://api.geonames.org/countryInfoJSON?formatted=true&lang=en&country=&username=tomkallen&style=full")
+            .then(data => data.json())
+            .then(data => this.parseDB(data))
+            .catch(error => console.log('Error receiving data', error));
     }
 
     onUpdate = data => this.setState({ container:data });
@@ -28,34 +29,35 @@ class App extends Component {
 
     parseDB = data => {
         let formattedDB = {};
-        let continents;
         data.geonames.forEach(v =>
             formattedDB.hasOwnProperty(v.continentName) ?
                 formattedDB[v.continentName].push(v.countryName):
                 formattedDB[v.continentName] = []
         );
 
-        continents = Object.keys(formattedDB).map( key => { return(
+        let continents = Object.keys(formattedDB).map( key => (
             <div key={ key }>
                 <Continents countryList={ formattedDB[key] } continent={ key }/>
-            </div>)});
+            </div>));
         console.log(continents);
 
         this.setState({
             geo: data.geonames,
             db: formattedDB,
-            continents: continents
+            // continentList: continents
         });
     };
 
     render() {
+        console.log(this.state.continentList);
         return (
             <div className="App">
                 <div className="App__header">
                     <div className="App__logo">The World Tour</div>
                     <Breadcrumbs nav={ this.state.container }/>
                 </div>
-                <div className="continent__list">{ this.state.continents }</div>
+                <div className="continent__list">{ this.state.continentList }</div>
+                {/*WTF is wrong with this? ^ */}
                 {!this.state.selected &&<Info data={ this.state.geo }/>}
                 {/* Show this dandy Info ^^^^ component when nothing is selected*/}
             </div>

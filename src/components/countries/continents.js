@@ -6,11 +6,7 @@ import "./countries.css";
 class Continents extends Component{
     constructor(props){
         super(props);
-        this.state({countryList:[]});
-    }
-
-     componentDidMount(){
-
+        this.state({countries:[]});
     }
 
     render(){
@@ -21,7 +17,7 @@ class Continents extends Component{
                     <Country name={ v }/>
                 </div>
             ));
-            // this.setState({ countryList: countryList });
+            // this.setState({ countries: countryList });
 
             return (
                 <div >

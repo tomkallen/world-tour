@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71b966b7-2cd8-4233-beac-ea7318dd7761" name="Default" comment="better eject">
+    <list default="true" id="71b966b7-2cd8-4233-beac-ea7318dd7761" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/countries/countries.css" afterPath="$PROJECT_DIR$/src/components/countries/countries.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/countries/countries.js" afterPath="$PROJECT_DIR$/src/components/countries/countries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/countries/index.js" afterPath="$PROJECT_DIR$/src/components/countries/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/info/info.css" afterPath="$PROJECT_DIR$/src/components/info/info.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/countries/continents.js" afterPath="$PROJECT_DIR$/src/components/countries/continents.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,14 +24,14 @@
     <favorites_list name="world-tour" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4724689">
+    <splitter split-orientation="horizontal" split-proportion="0.41207814">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="continents.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/countries/continents.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+                <state relative-caret-position="468">
+                  <caret line="26" column="9" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="26" selection-end-column="9" />
                   <folding>
                     <element signature="e#0#52#0" expanded="true" />
                   </folding>
@@ -81,31 +77,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="countries.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/countries/countries.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/App.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
-                  <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+                <state relative-caret-position="213">
+                  <caret line="47" column="11" lean-forward="true" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -439,7 +415,7 @@
       <workItem from="1481533059811" duration="5482000" />
       <workItem from="1481615299125" duration="8000" />
       <workItem from="1481615365248" duration="5184000" />
-      <workItem from="1481651682729" duration="3773000" />
+      <workItem from="1481651682729" duration="6945000" />
     </task>
     <task id="LOCAL-00001" summary="begin implementing state transfer">
       <created>1481269291138</created>
@@ -532,11 +508,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481534075443</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Continents component (not working ofc)">
+      <created>1481656630666</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1481656630666</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34089000" />
+    <option name="totallyTimeSpent" value="37261000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -549,12 +532,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11011591" sideWeight="0.49515906" order="3" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21668473" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21668473" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18229716" sideWeight="0.50484097" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -609,7 +592,8 @@
     <MESSAGE value="conditionals are in condition now!" />
     <MESSAGE value="ejected" />
     <MESSAGE value="better eject" />
-    <option name="LAST_COMMIT_MESSAGE" value="better eject" />
+    <MESSAGE value="Continents component (not working ofc)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continents component (not working ofc)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -966,6 +950,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/countries/countries.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -974,11 +966,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/countries/countries.css">
+    <entry file="file://$PROJECT_DIR$/src/components/countries/continents.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="468">
+          <caret line="26" column="9" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="26" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -992,20 +986,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/countries/continents.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="213">
+          <caret line="47" column="11" lean-forward="true" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
