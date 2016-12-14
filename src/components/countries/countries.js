@@ -7,6 +7,8 @@ export class Country extends Component{
         country: this.props.country,
         continent: this.props.continent
     });
+    // user can click country inside another expanded continent list
+    // so we need to update the continent as well
 
     render(){
         return(

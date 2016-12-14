@@ -9,23 +9,24 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            geo: [],
-            container: {},
-            continent:'',
-            country:'',
-            db: {},
-            continentList: []
+            geo: [], // raw database
+            continent:'', // piped data for Breadcrumbs and Info
+            country:'', // piped data for Breadcrumbs and Info
+            db: {}, // formatted DB
+            continentList: [] // continent holder for Continents component
         }
     }
 
     componentDidMount() {
         fetch("http://api.geonames.org/countryInfoJSON?formatted=true&lang=en&country=&username=tomkallen&style=full")
             .then(data => data.json())
-            .then(data => this.parseDB(data))
+            .then(data => this.parseDB(data)) // rebuilding db to represent continents-> countries format
             .catch(error => console.log('Error receiving data', error));
     }
 
     parseDB = data => {
+
+        // recreating database as mentioned above
         let formattedDB = {};
         data.geonames.forEach(v =>
             formattedDB.hasOwnProperty(v.continentName) ?
@@ -34,19 +35,18 @@ class App extends Component {
         );
 
         this.setState({
-            geo: data.geonames,
+            geo: data.geonames,  // data.geonames is an object containing all the data
             db: formattedDB
         });
     };
 
     dataAccumulator = data => {
-        data.continent && this.setState({continent:data.continent});
-        this.setState({country:data.country});
 
-        // this.setState({
-        //     continent: data.continent,
-        //     country: data.country
-        // })
+        // Here we operate the data piped up from children (see sendToParent methods)
+        this.setState({
+            continent: data.continent,
+            country: data.country
+        })
     };
 
     render() {
@@ -63,8 +63,9 @@ class App extends Component {
                     db={this.state.db}
                     data={this.state.geo}
                     sendToParent={ this.dataAccumulator }/></div>
-                {!this.state.selected &&<Info data={ this.state.geo } db={ this.state.db }/>}
-                {/* Show this dandy Info ^^^^ component when nothing is selected*/}
+                {/*{!this.state.continent &&<Info data={ this.state.geo } db={ this.state.db }/>}*/}
+                <Info data={ this.state.geo } db={ this.state.db }/>
+                {/* Change this ^^^  when country/continent info pages are done */}
             </div>
         );
     }

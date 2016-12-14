@@ -10,6 +10,7 @@ class Continents extends Component{
 
     render(){
 
+        // Collecting list of continents using push because why not
         if (this.props.db) {
             let continentList =[];
             let db = this.props.db;
@@ -33,23 +34,25 @@ class Continents extends Component{
 
     sendToParent = data => this.props.sendToParent(data);
     // this is the custom pipe helper that traverses components
-    // and transmits data up for as many levels as needed
+    // and transmits data up for as many levels as needed.
+    // Data is going up via linked chain of props<->methods
 }
 
 class Continent extends Component{
     constructor(props){
         super(props);
-        this.state =({ clicked: this.props.expanded });
+        this.state =({ clicked: false});
     }
 
     expand =() => {
+
+        // expand countries list and pipe selected data up
         this.setState({ clicked: !this.state.clicked });
         this.sendToParent({
             continent: this.props.continent,
-            country: ''
+            country: '' // country becomes 'not selected' so we could display continent info
         });
     };
-    // helper to expand/collapse list of countries by continent
 
     sendToParent = data => this.props.sendToParent(data);
     render(){
@@ -79,10 +82,7 @@ class Continent extends Component{
         }
 
         return(<div>Loading your countries</div>)
-
-
     }
-
 }
 
 export { Continents, Continent }
