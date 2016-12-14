@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { Bars } from '../visual'
 import './info.css'
 
 export class Info extends Component{
@@ -15,19 +16,21 @@ export class Info extends Component{
 
             return(
             <div className="info">
-                <h2>World Tour info</h2>
+                <h2>World info</h2>
                 <p>There are { data.length } countries in the world so far,
                 which are inhabited by { population } men and women.</p>
                 <p>Approximately of course.</p>
                 <p>{ data.length } countries include those partly recognized, not
                 recognized at all and some other weird minor states that can barely
-                be called 'countries'</p>
+                be called 'countries'.</p>
+                <Bars data={this.props.data} />
+                <p>Chart above represents countries distribution sorted by the parts of the world.
+                Hover these bars with your mouse to see what country or continent you are looking at.</p>
             </div>)
-
         }
 
         return (
-            <div className="info">Loading</div>
+            <div className="info">Loading some data for you. Bear with me.</div>
         )
     }
 }

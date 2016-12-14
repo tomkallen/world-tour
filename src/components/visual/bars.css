@@ -1,0 +1,48 @@
+.bar{
+    width: 18px;
+    height:18px;
+    margin:0 2px 2px 0;
+    display: inline-block;
+    border: 1px solid #888;
+    transition: all .2s linear;
+}
+
+.bar:hover{
+    width:36px;
+    border-color: #000;
+}
+
+.bars {
+    padding: 1em;
+    line-height: 0;
+
+}
+
+.Eu {
+    background-color: red;
+}
+
+.As {
+    background-color: yellow;
+}
+
+.No {
+    background-color: green;   
+}
+
+.Af {
+    background-color: darkorange;
+}
+
+.An {
+    background-color: whitesmoke;
+}
+
+.So {
+    background-color: dodgerblue;
+}
+
+.Oc {
+    background-color: lawngreen;
+}
+

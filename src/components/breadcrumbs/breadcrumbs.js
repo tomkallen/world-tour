@@ -2,20 +2,28 @@ import React, { PropTypes } from 'react';
 import './breadcrumbs.css'; 
 
 export const Breadcrumbs = props => {
-    if (props.nav.countryName){
-        // let code = props.nav.countryCode;
-        return (
-            <div className="breadcrumbs">
-
-                <li> { props.nav.countryName }</li>
-            </div>
+    let continent, country;
+    if (props.continent){
+         continent = (
+            <li className="breadcrumbs__continent">
+                { props.continent }
+            </li>
         );
     }
+    if (props.country){
+         country = (
+            <li className="breadcrumbs__country">
+                { props.country }
+            </li>
+        );
+    }
+    return props.continent ?
+        (<div className="breadcrumbs">{ continent } : { country }</div>) :
+        (<div className="breadcrumbs"><li>Please select country</li></div>);
 
-    return(<div className="breadcrumbs"><li>Please select country</li></div>);
 
 };
 
 Breadcrumbs.propTypes = {
-    nav: PropTypes.object.isRequired
+    continent: PropTypes.string
 };

@@ -11,7 +11,8 @@ class App extends Component {
         this.state = {
             geo: [],
             container: {},
-            selected: false,
+            continent:'',
+            country:'',
             db: {},
             continentList: []
         }
@@ -24,9 +25,6 @@ class App extends Component {
             .catch(error => console.log('Error receiving data', error));
     }
 
-    onUpdate = data => this.setState({ container:data });
-    // receives selected country from the child component to work with
-
     parseDB = data => {
         let formattedDB = {};
         data.geonames.forEach(v =>
@@ -35,30 +33,37 @@ class App extends Component {
                 formattedDB[v.continentName] = []
         );
 
-        let continents = Object.keys(formattedDB).map( key => (
-            <div key={ key }>
-                <Continents countryList={ formattedDB[key] } continent={ key }/>
-            </div>));
-        console.log(continents);
-
         this.setState({
             geo: data.geonames,
-            db: formattedDB,
-            // continentList: continents
+            db: formattedDB
         });
     };
 
+    dataAccumulator = data => {
+        data.continent && this.setState({continent:data.continent});
+        this.setState({country:data.country});
+
+        // this.setState({
+        //     continent: data.continent,
+        //     country: data.country
+        // })
+    };
+
     render() {
-        console.log(this.state.continentList);
+
         return (
             <div className="App">
                 <div className="App__header">
                     <div className="App__logo">The World Tour</div>
-                    <Breadcrumbs nav={ this.state.container }/>
+                    <Breadcrumbs
+                        country={ this.state.country }
+                        continent={ this.state.continent }/>
                 </div>
-                <div className="continent__list">{ this.state.continentList }</div>
-                {/*WTF is wrong with this? ^ */}
-                {!this.state.selected &&<Info data={ this.state.geo }/>}
+                <div className="continent__list"><Continents
+                    db={this.state.db}
+                    data={this.state.geo}
+                    sendToParent={ this.dataAccumulator }/></div>
+                {!this.state.selected &&<Info data={ this.state.geo } db={ this.state.db }/>}
                 {/* Show this dandy Info ^^^^ component when nothing is selected*/}
             </div>
         );
@@ -66,3 +71,4 @@ class App extends Component {
 }
 
 export default App;
+
