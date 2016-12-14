@@ -4,7 +4,7 @@ import { Breadcrumbs } from './components/breadcrumbs';
 import { Info } from './components/info';
 import './App.css';
 
-class App extends Component {
+export default class App extends Component {
 
     constructor() {
         super();
@@ -60,8 +60,8 @@ class App extends Component {
                         continent={ this.state.continent }/>
                 </div>
                 <div className="continent__list"><Continents
-                    db={this.state.db}
-                    data={this.state.geo}
+                    db={ this.state.db }
+                    data={ this.state.geo }
                     sendToParent={ this.dataAccumulator }/></div>
                 {/*{!this.state.continent &&<Info data={ this.state.geo } db={ this.state.db }/>}*/}
                 <Info data={ this.state.geo } db={ this.state.db }/>
@@ -70,6 +70,4 @@ class App extends Component {
         );
     }
 }
-
-export default App;
 

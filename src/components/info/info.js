@@ -22,7 +22,8 @@ export class Info extends Component{
                 <p>Approximately of course.</p>
                 <p>{ data.length } countries include those partly recognized, not
                 recognized at all and some other weird minor states that can barely
-                be called 'countries'.</p>
+                be called 'countries'.</p><br/>
+                <h2>The World chart</h2>
                 <Bars data={this.props.data} />
                 <p>Chart above represents countries distribution sorted by the parts of the world.
                 Hover these bars with your mouse to see what country or continent you are looking at.</p>

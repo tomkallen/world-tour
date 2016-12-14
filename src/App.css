@@ -9,11 +9,12 @@
 }
 
 .continent__list {
-    width: 18%;
-    border-right: 1px solid black;
-    padding-top: 1rem;
+    max-width: 20%;
+    display: inline-block;
+    padding: 1rem;
+    position: fixed;
     height:75vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     float: left;
 }
