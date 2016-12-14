@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Continents } from './components/countries';
 import { Breadcrumbs } from './components/breadcrumbs';
 import { Info } from './components/info';
+import { ContinentInfo } from './components/visual';
 import './App.css';
 
 export default class App extends Component {
@@ -63,8 +64,12 @@ export default class App extends Component {
                     db={ this.state.db }
                     data={ this.state.geo }
                     sendToParent={ this.dataAccumulator }/></div>
-                {/*{!this.state.continent &&<Info data={ this.state.geo } db={ this.state.db }/>}*/}
-                <Info data={ this.state.geo } db={ this.state.db }/>
+                {!this.state.continent &&<Info data={ this.state.geo } db={ this.state.db }/>}
+                {this.state.continent && <ContinentInfo
+                    db={ this.state.db }
+                    data={ this.state.geo }
+                    continent={this.state.continent} />}
+                {/*<Info data={ this.state.geo } db={ this.state.db }/>*/}
                 {/* Change this ^^^  when country/continent info pages are done */}
             </div>
         );

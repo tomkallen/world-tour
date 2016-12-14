@@ -19,3 +19,15 @@
     padding: 0 3rem;
     margin: 0.5rem;
 }
+
+iframe {
+    width: 75%;
+    height:320px;
+    display: block;
+    border: none;
+    margin: 0 auto 2rem;
+}
+
+span {
+    color: darkorange;
+}
