@@ -12,7 +12,8 @@ export class Country extends Component{
 
     render(){
         return(
-            <li onClick={ this.sendToParent } className="country">
+            <li onClick={ this.sendToParent }
+                className="country">
                 { this.props.country }
             </li>
         )

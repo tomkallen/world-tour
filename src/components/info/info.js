@@ -9,10 +9,10 @@ export class Info extends Component{
         if (this.props.data.length){ //fetched?
 
             let data = this.props.data;
-            let population = ((data.reduce((total, i)=>{
+            let population = ((data.reduce((total, i) => {
                 return total + Number(i.population)}
                 , 0)) /1000000).toFixed(0) *1000000;
-            // Magical round-up!
+            // Magical round-up! Getting total number of people w/o hardcoding.
 
             return(
             <div className="info">

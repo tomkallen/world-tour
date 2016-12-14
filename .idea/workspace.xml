@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71b966b7-2cd8-4233-beac-ea7318dd7761" name="Default" comment="">
+    <list default="true" id="71b966b7-2cd8-4233-beac-ea7318dd7761" name="Default" comment="better menu behaviour">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/countries/countries.js" afterPath="$PROJECT_DIR$/src/components/countries/countries.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/info/info.css" afterPath="$PROJECT_DIR$/src/components/info/info.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/info/info.js" afterPath="$PROJECT_DIR$/src/components/info/info.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/visual/bars.js" afterPath="$PROJECT_DIR$/src/components/visual/bars.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,7 +40,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="bars.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="bars.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/visual/bars.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="90">
@@ -51,11 +50,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="breadcrumbs.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="breadcrumbs.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/breadcrumbs/breadcrumbs.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="486">
-                  <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+                <state relative-caret-position="396">
+                  <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -67,11 +66,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="countries.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="countries.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/countries/countries.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                <state relative-caret-position="252">
+                  <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -82,8 +81,8 @@
           <file leaf-file-name="info.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/info/info.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="432">
-                  <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+                <state relative-caret-position="252">
+                  <caret line="14" column="79" lean-forward="false" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
                   <folding>
                     <element signature="e#0#52#0" expanded="true" />
                   </folding>
@@ -94,8 +93,8 @@
           <file leaf-file-name="info.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/info/info.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="216">
-                  <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+                <state relative-caret-position="360">
+                  <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -121,7 +120,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="App.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="216">
@@ -183,17 +182,17 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/countries/index.js" />
         <option value="$PROJECT_DIR$/src/components/visual/index.js" />
-        <option value="$PROJECT_DIR$/src/components/info/info.css" />
         <option value="$PROJECT_DIR$/src/components/visual/bars.css" />
         <option value="$PROJECT_DIR$/src/components/countries/countries.css" />
         <option value="$PROJECT_DIR$/src/components/breadcrumbs/breadcrumbs.css" />
         <option value="$PROJECT_DIR$/src/components/countries/continents.js" />
-        <option value="$PROJECT_DIR$/src/components/countries/countries.js" />
-        <option value="$PROJECT_DIR$/src/components/breadcrumbs/breadcrumbs.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/visual/bars.js" />
-        <option value="$PROJECT_DIR$/src/components/info/info.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
+        <option value="$PROJECT_DIR$/src/components/info/info.css" />
+        <option value="$PROJECT_DIR$/src/components/breadcrumbs/breadcrumbs.js" />
+        <option value="$PROJECT_DIR$/src/components/info/info.js" />
+        <option value="$PROJECT_DIR$/src/components/countries/countries.js" />
       </list>
     </option>
   </component>
@@ -357,6 +356,20 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="world-tour">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="ProjectPane">
@@ -484,7 +497,7 @@
       <workItem from="1481615365248" duration="5184000" />
       <workItem from="1481651682729" duration="9168000" />
       <workItem from="1481700810757" duration="1625000" />
-      <workItem from="1481726627434" duration="14180000" />
+      <workItem from="1481726627434" duration="14904000" />
     </task>
     <task id="LOCAL-00001" summary="begin implementing state transfer">
       <created>1481269291138</created>
@@ -605,11 +618,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481740449290</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="better menu behaviour">
+      <created>1481741486109</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1481741486109</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55289000" />
+    <option name="totallyTimeSpent" value="56013000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -706,7 +726,8 @@
     <MESSAGE value="added bar charts" />
     <MESSAGE value="looks much better now" />
     <MESSAGE value="code clean-up" />
-    <option name="LAST_COMMIT_MESSAGE" value="code clean-up" />
+    <MESSAGE value="better menu behaviour" />
+    <option name="LAST_COMMIT_MESSAGE" value="better menu behaviour" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1013,38 +1034,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/info/info.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/countries/continents.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/breadcrumbs/breadcrumbs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/countries/countries.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -1087,16 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/info/info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/countries/countries.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1110,6 +1093,44 @@
         <state relative-caret-position="216">
           <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/info/info.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/breadcrumbs/breadcrumbs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/info/info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="79" lean-forward="false" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/countries/countries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
