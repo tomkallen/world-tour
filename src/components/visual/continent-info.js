@@ -26,7 +26,7 @@ export class ContinentInfo extends Component {
             <div className="info">
                 <h2 className="info__header">{ this.props.continent }</h2>
                 <Map map={ this.props.continent } />
-                <p>Meet <span>{ this.props.continent }</span>.</p>
+                <p className="paragraph__meet">Meet <span>{ this.props.continent }</span>.</p>
                 <p>{ this.props.continent} has { this.props.db[this.props.continent].length } states.</p>
                 <p><span>{ largest[largest.length-1].countryName }</span> is the largest country over there.
                     And <span>{ largest[0].countryName }</span> is the tiniest. It is just { largest[0].areaInSqKm } &#13218; big!

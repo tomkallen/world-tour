@@ -4,4 +4,6 @@ body, html {
     font-family: 'Questrial', sans-serif;
     width:100%;
     box-sizing: border-box;
+    background-color: #00416A;
+    color: #fff;
 }
