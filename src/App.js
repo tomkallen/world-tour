@@ -60,17 +60,19 @@ export default class App extends Component {
                         country={ this.state.country }
                         continent={ this.state.continent }/>
                 </div>
-                <div className="continent__list"><Continents
+                <div className="left__pad continent__list">
+                    <Continents
                     db={ this.state.db }
                     data={ this.state.geo }
-                    sendToParent={ this.dataAccumulator }/></div>
+                    sendToParent={ this.dataAccumulator }/>
+                </div>
+                <div className="right__pad">
                 {!this.state.continent &&<Info data={ this.state.geo } db={ this.state.db }/>}
                 {this.state.continent && <ContinentInfo
                     db={ this.state.db }
                     data={ this.state.geo }
                     continent={this.state.continent} />}
-                {/*<Info data={ this.state.geo } db={ this.state.db }/>*/}
-                {/* Change this ^^^  when country/continent info pages are done */}
+                </div>
             </div>
         );
     }

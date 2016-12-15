@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Map } from './index';
 import '../info/info.css';
 
 
@@ -23,8 +24,8 @@ export class ContinentInfo extends Component {
 
         return(
             <div className="info">
-                <h2>{ this.props.continent }</h2>
-                <iframe src={`https://www.google.com/maps/embed/v1/place?q=${this.props.continent}&key=AIzaSyDbdidLOBf0pET9rauuDY6vYliQniEF5LM`}></iframe>
+                <h2 className="info__header">{ this.props.continent }</h2>
+                <Map map={ this.props.continent } />
                 <p>Meet <span>{ this.props.continent }</span>.</p>
                 <p>{ this.props.continent} has { this.props.db[this.props.continent].length } states.</p>
                 <p><span>{ largest[largest.length-1].countryName }</span> is the largest country over there.

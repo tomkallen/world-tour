@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Bars } from '../visual'
+import { Map, Bars } from '../visual'
 import './info.css'
 
 export class Info extends Component{
@@ -16,8 +16,8 @@ export class Info extends Component{
 
             return(
             <div className="info">
-                <h2>World info</h2>
-                <iframe src="https://www.google.com/maps/embed/v1/place?q=world&key=AIzaSyDbdidLOBf0pET9rauuDY6vYliQniEF5LM"></iframe>
+                <h2 className="info__header">World info</h2>
+                <Map map="world" />
                 <p>There are { data.length } countries in the world so far,
                 which are inhabited by { population } men and women.</p>
                 <p>Approximately of course.</p>

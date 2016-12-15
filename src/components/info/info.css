@@ -1,8 +1,7 @@
 .info {
-    padding: 2rem;
-    width: 70%;
-    float: right;
-    display: inline-block;
+    padding: 0;
+    margin: 0;
+    position: relative;
 }
 
 .info h2 {
@@ -12,24 +11,27 @@
     letter-spacing: .25rem;
     color: #00416A;
     line-height: 1rem;
-    margin: 0.75rem;
+    margin: 1.25rem;
 
 }
 
 .info p {
-    font-size:1.2rem;
+    font-size:1.25rem;
     padding: 0 2rem;
     margin: 0.25rem;
+    line-height: 1.5rem;
 }
 
-iframe {
-    width: 70%;
-    height:280px;
-    display: block;
-    border: none;
-    margin: 0 auto 2rem;
+.info__header{
+    position: absolute;
+    color: #00416A;
+    font-size: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 1px 1px 0 #fff;
 }
 
 span {
     color: darkorange;
 }
+
