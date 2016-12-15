@@ -32,9 +32,10 @@ export class CountryInfo extends Component {
                     Total area of { country } is { countryData.areaInSqKm } square kilometers.
                 </p>
                 <p>I have calculated that if we evenly distribute all the citizens of the country then
-                    nearly { Math.floor(countryData.population / (isNaN(countryData.areaInSqKm)? 0.001:countryData.areaInSqKm)) }
-                    people will be settled in 1 square kilometer.</p>
+                    nearly { Math.floor(countryData.population / (isNaN(countryData.areaInSqKm)? 0.001:countryData.areaInSqKm)) } people will be settled in 1 square kilometer.
+                </p>
                     {/*Hard maths to avoid silly results! ^^^ */}
+
                 <p>In a global scope people of { country } are { (countryData.population / 68630000).toFixed(4) }%
                     of all the people living in the world right now!</p>
 
