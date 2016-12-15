@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Continents } from './components/countries';
 import { Breadcrumbs } from './components/breadcrumbs';
 import { Info } from './components/info';
-import { ContinentInfo } from './components/visual';
+import { CountryInfo, ContinentInfo } from './components/visual';
 import './App.css';
 
 export default class App extends Component {
@@ -14,7 +14,7 @@ export default class App extends Component {
             continent:'', // piped data for Breadcrumbs and Info
             country:'', // piped data for Breadcrumbs and Info
             db: {}, // formatted DB
-            continentList: [] // continent holder for Continents component
+            continentList: [], // continent holder for Continents component
         }
     }
 
@@ -52,6 +52,19 @@ export default class App extends Component {
 
     render() {
 
+        let info = !this.state.continent ?
+            <Info data={ this.state.geo } db={ this.state.db }/> :
+            !this.state.country ?
+                <ContinentInfo
+                    db={ this.state.db }
+                    data={ this.state.geo }
+                    continent={this.state.continent} /> :
+                <CountryInfo
+                    db={ this.state.db }
+                    data={ this.state.geo }
+                    country={ this.state.country }/>;
+
+
         return (
             <div className="App">
                 <div className="App__header">
@@ -66,13 +79,7 @@ export default class App extends Component {
                     data={ this.state.geo }
                     sendToParent={ this.dataAccumulator }/>
                 </div>
-                <div className="right__pad">
-                {!this.state.continent &&<Info data={ this.state.geo } db={ this.state.db }/>}
-                {this.state.continent && <ContinentInfo
-                    db={ this.state.db }
-                    data={ this.state.geo }
-                    continent={this.state.continent} />}
-                </div>
+                <div className="right__pad">{ info }</div>
             </div>
         );
     }

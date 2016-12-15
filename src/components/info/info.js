@@ -16,7 +16,7 @@ export class Info extends Component{
 
             return(
             <div className="info">
-                <h2 className="info__header">World info</h2>
+                <h2 className="info__header">The World</h2>
                 <Map map="world" />
                 <p>There are { data.length } countries in the world so far,
                 which are inhabited by { population } men and women.</p>

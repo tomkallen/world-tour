@@ -22,10 +22,10 @@
     line-height: 1.5rem;
 }
 
-.info__header{
+h2.info__header{
     position: absolute;
     color: #00416A;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     left: 50%;
     transform: translateX(-50%);
     text-shadow: 1px 1px 0 #fff;
