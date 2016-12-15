@@ -11,10 +11,9 @@ export default class App extends Component {
         super();
         this.state = {
             geo: [], // raw database
-            continent:'', // piped data for Breadcrumbs and Info
-            country:'', // piped data for Breadcrumbs and Info
+            continent: '', // piped data for Breadcrumbs and Info
+            country: '', // piped data for Breadcrumbs and Info
             db: {} // formatted DB
-
         }
     }
 
@@ -40,7 +39,6 @@ export default class App extends Component {
                 formattedDB[v.continentName].push(v.countryName):
                 formattedDB[v.continentName] = []
         );
-
         this.setState({
             geo: data.geonames,  // data.geonames is an object containing all the data
             db: formattedDB
@@ -63,7 +61,8 @@ export default class App extends Component {
 
         // =========================================================
         // This is the switch logic based on application state
-        // stored in dataAccumulator:
+        // stored in dataAccumulator.
+        // Info -> ContinentInfo -> CountryInfo is a tree-like structure
         let infoComponent = !this.state.continent ?
             <Info data={ this.state.geo } db={ this.state.db }/> :
             !this.state.country ?
@@ -90,9 +89,9 @@ export default class App extends Component {
                 </div>
                 <div className="left__pad continent__list">
                     <Continents
-                    db={ this.state.db }
-                    data={ this.state.geo }
-                    sendToParent={ this.dataAccumulator }/>
+                        db={ this.state.db }
+                        data={ this.state.geo }
+                        sendToParent={ this.dataAccumulator }/>
                 </div>
                 <div className="right__pad">{ infoComponent }</div>
             </div>
